@@ -14,13 +14,17 @@ export class RecipeService{
         new Recipe('Dal Makhni','I dont Know', 'https://static.toiimg.com/thumb/53097626.cms?width=1200&height=900',[new Ingredient("Milk",1)]),
         new Recipe('Dal Makhni','I dont Know', 'https://static.toiimg.com/thumb/53097626.cms?width=1200&height=900',[new Ingredient('Paneer', 1)])
     ]
-
+ 
     getRecipes(){
         return this.recipes.slice();
     }
 
     addIngredientsToShoppingList(ingredients:Ingredient[]){
         this.slService.addIngredients(ingredients);
+    }
+
+    getRecipe(index:number){
+        return this.recipes[index];
     }
 
 }
